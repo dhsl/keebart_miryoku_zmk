@@ -1,0 +1,31 @@
+#define KEYS_LEFT   0 1 2 3 4 5 6      14 15 16 17 18 19 20  28 29 30 31 32 33
+#define KEYS_RIGHT  7 8 9 10 11 12 13  21 22 23 24 25 26 27  34 35 36 37 38 39
+#define THUMBS_LEFT   40 41 42
+#define THUMBS_RIGHT  43 44 45
+
+/ {
+    behaviors {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };
+    };
+};
