@@ -1,7 +1,7 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
-#define HYPER LGUI(LCTRL(LALT(LSHFT)))
+#define HYPER LG(LC(LA(LSHFT)))
 #define U_HML(LAYER, TAP) &hml LAYER TAP
 #define U_HMR(LAYER, TAP) &hmr LAYER TAP
 
