@@ -26,3 +26,4 @@ jobs:
       board: '["corne_choc_pro_left","corne_choc_pro_right"]'
       extra_shield: '["sharp_mip"]'
       alphas: ${{ format('["{0}"]', inputs.alphas) }}
+      clipboard: '["mac"]'
